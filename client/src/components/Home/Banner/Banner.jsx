@@ -17,7 +17,7 @@ const Banner = () => {
                     <div className="banner-ctas v2">Order Now</div>
                 </div>
             </div>
-                {/* <img className="banner-img" src={BannerImg} alt="Indoor-Plants" /> */}
+                <img className="banner-img" src={BannerImg} alt="Indoor-Plants" />
         </div>
     </div>
     );

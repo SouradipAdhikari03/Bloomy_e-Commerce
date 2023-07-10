@@ -9,6 +9,11 @@
         @content;
     }
 }
+@mixin md_Banner {
+    @media only screen and (min-width: 1115px) {
+        @content;
+    }
+}
 
 @mixin lg {
     @media only screen and (min-width: 1024px) {
