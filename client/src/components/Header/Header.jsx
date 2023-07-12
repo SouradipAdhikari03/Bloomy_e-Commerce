@@ -11,6 +11,7 @@ import { Context } from "../../utils/context";
 import "./Header.scss";
 const Header = () => {
     const [scrolled, setScrolled]=useState(false);
+    const [showCart, setShowCart]=useState(false);
     const handelScroll=()=>{
         const offset=window.scrollY;
         if(offset>200){
@@ -25,6 +26,7 @@ const Header = () => {
         window.addEventListener("scroll",handelScroll)
     },[]);
     return (
+        <>
         <header className={`main-header ${scrolled? "sticky-header":" "}`}>
             <div className="header-content">
                 <ul>
@@ -38,13 +40,17 @@ const Header = () => {
                 <div className="right">
                     <TbSearch/>
                     <AiOutlineHeart/>
-                    <span className="cart-icon">
+                    <span className="cart-icon"
+                        onClick={()=> setShowCart(true)}
+                    >
                         <CgShoppingCart/>
                         <span>5</span>
                     </span>
                 </div>
             </div>
         </header>
+        {showCart && <Cart setShowCart= {setShowCart}/>}
+        </>
     );
 };
 
