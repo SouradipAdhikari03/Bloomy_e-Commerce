@@ -1,1 +1,113 @@
 @import "../../../css-config/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@500;600&family=Clicker+Script&family=Edu+NSW+ACT+Foundation:wght@500&family=Kaushan+Script&family=Mali:wght@300;400&family=Merriweather:ital,wght@1,300&family=Patua+One&family=Play:wght@700&family=Righteous&family=Rubik+Moonrocks&family=Satisfy&display=swap');
+
+.search-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateY(100%);
+    animation: searchWindow 0.5s ease forwards;
+    .form-field{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 50px;
+        border-bottom: 1px solid rgb(4, 170, 109,0.5);
+        position: relative;
+        @include md{
+            padding: 20px 0;
+        }
+        input{
+            width: 100%;
+            max-width: 1200px;
+            height: 50px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #04aa6d;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            font-family: 'Arima', cursive;
+            @include md{
+                font-size: 48px;
+                height: 80px;
+            }
+        }
+        .close-btn{
+            position: absolute;
+            font-size: 25px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            @include md{
+                right: 40px;font-size: 50px;
+            }
+        }
+    }
+    .search-result-content{
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md{
+            max-width: 800px;
+        }
+        .search-results{
+            height: calc(100vh - 110px);
+            overflow: auto;
+            margin: 20px 0;
+            @include md{
+                height: calc(100vh - 160px);
+            }
+            .search-result-item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 0;
+                border-bottom: 1px solid rgb(4, 170, 109,0.5);
+                cursor: pointer;
+                .img-container{
+                    background-color: #f2fbf8;
+                    width: 60px;
+                    height: 60px;
+                    flex-shrink: 0;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .prod-details{
+                    overflow: hidden;
+                    .name{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 16px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        display: block;
+                        color: #04aa6d;
+                    }
+                    .desc{
+                        font-size: 15px;
+                        line-height: 1;
+                        display: block;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes searchWindow {
+    0%{transform: translateY(100%);}
+    100%{transform: translateY(0%);}
+}

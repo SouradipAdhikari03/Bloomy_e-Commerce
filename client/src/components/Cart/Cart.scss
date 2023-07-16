@@ -1,4 +1,6 @@
 @import "../../css-config/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@500;600&family=Clicker+Script&family=Edu+NSW+ACT+Foundation:wght@500&family=Kaushan+Script&family=Mali:wght@300;400&family=Merriweather:ital,wght@1,300&family=Patua+One&family=Play:wght@700&family=Righteous&family=Rubik+Moonrocks&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@500;600&family=Clicker+Script&family=Edu+NSW+ACT+Foundation:wght@500&family=Kaushan+Script&family=Mali:wght@300;400&family=Merriweather:ital,wght@1,300&family=Open+Sans&family=Patua+One&family=Play:wght@700&family=Righteous&family=Rubik+Moonrocks&family=Satisfy&display=swap');
 
 .cart-pannel{
     position: fixed;
@@ -42,6 +44,7 @@
                 font-size: 20px;
                 font-weight: 700;
                 color: #04aa6d;
+                font-family: 'Arima', cursive;
             }
             .close-btn{
                 display: flex;
@@ -95,6 +98,7 @@
                 display: flex;
                 justify-content: space-between;
                 .text{
+                    font-family: 'Arima', cursive;
                     margin-bottom: 0;
                     font-size: 20px;
                     font-weight: 700;
