@@ -22,13 +22,15 @@
                 width: 100%;
                 background-color: rgb(4, 170, 109,0.05);
                 flex-shrink: 0;
+                display: flex;
                 @include md{
                     width: 400px;
                     height: 400px;
                 }
                 img{
                     width: 100%;
-                    display: block;
+                    width: 100%;
+                    object-fit: contain;
                 }
             }
             .right{

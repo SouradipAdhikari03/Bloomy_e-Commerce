@@ -32,7 +32,7 @@ const Home = () => {
       <div className="main-content">
         <div className="layout">
           <Category categories={categories} />
-          <Product headingText="Trending Products" />
+          <Product products={products} headingText="Trending Products" />
         </div>
       </div>
     </div>

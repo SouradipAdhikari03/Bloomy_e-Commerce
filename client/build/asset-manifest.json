@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5de02093.css",
+    "main.js": "/static/js/main.3e0a76d3.js",
+    "static/media/newsletter-bg.jpeg": "/static/media/newsletter-bg.3c9de57003dcfe448bf6.jpeg",
+    "static/media/banner-img.png": "/static/media/banner-img.0bb8fe61050f1e962c5e.png",
+    "static/media/snake-plant.webp": "/static/media/snake-plant.a8fa76d0f189e36053db.webp",
+    "index.html": "/index.html",
+    "main.5de02093.css.map": "/static/css/main.5de02093.css.map",
+    "main.3e0a76d3.js.map": "/static/js/main.3e0a76d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5de02093.css",
+    "static/js/main.3e0a76d3.js"
+  ]
+}

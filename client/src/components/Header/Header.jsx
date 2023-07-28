@@ -13,6 +13,8 @@ const Header = () => {
     const [scrolled, setScrolled]=useState(false);
     const [showCart, setShowCart]=useState(false);
     const [showSearch, setshowSearch]=useState(false);
+    const {cartCount} = useContext(Context);
+    const navigate =useNavigate();
     const handelScroll=()=>{
         const offset=window.scrollY;
         if(offset>200){
@@ -32,12 +34,12 @@ const Header = () => {
             <div className="header-content">
                 <ul>
                     <div className="left">
-                    <li>Home</li>
+                    <li onClick={()=>navigate("/")}>Home</li>
                     <li>About</li>
-                    <li>Categories</li>
+                    <li onClick={()=>navigate("/category")}>Categories</li>
                     </div>
                 </ul>
-                <div className="centre">Bloomy</div>
+                <div className="centre" onClick={()=>navigate("/")}>Bloomy</div>
                 <div className="right">
                     <TbSearch onClick={()=> setshowSearch(true)}/>
                     <AiOutlineHeart/>
@@ -45,7 +47,7 @@ const Header = () => {
                         onClick={()=> setShowCart(true)}
                     >
                         <CgShoppingCart/>
-                        <span>5</span>
+                        {!!cartCount && <span>{cartCount}</span>}
                     </span>
                 </div>
             </div>

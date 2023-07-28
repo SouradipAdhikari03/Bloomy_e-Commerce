@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Footer.scss";
 import {FaLocationArrow, FaMobileAlt, FaEnvelope} from "react-icons/fa";
 import Payment from "../../assets/payments.png"
 
 const Footer = () => {
+    const navigate =useNavigate();
     return (
         <footer className="footer">
             <div className="footer-content">
@@ -40,18 +42,18 @@ const Footer = () => {
                 <div className="col">
                     <div className="title">Categories</div>
                     <span>
-                    <div className="text">Indoor Plants</div>
-                    <div className="text">Garden Plants</div>
-                    <div className="text">Pesticides</div>
-                    <div className="text">Fertilizers</div>
-                    <div className="text">Tools</div>
-                    <div className="text">Books</div>
+                    <div className="text"onClick={()=>navigate("/category/1")}>Indoor Plants</div>
+                    <div className="text"onClick={()=>navigate("/category/2")}>Outdoor Plants</div>
+                    <div className="text"onClick={()=>navigate("/category/3")}>Garden Water Sprayer</div>
+                    <div className="text"onClick={()=>navigate("/category/4")}>Soil & Fertilizers</div>
+                    <div className="text"onClick={()=>navigate("/category/5")}>Tools</div>
+                    <div className="text"onClick={()=>navigate("/category/6")}>Books</div>
                     </span>
                 </div>
                 <div className="col">
                     <span>
                     <div className="title">Pages</div>
-                    <div className="text">Home</div>
+                    <div className="text" onClick={()=>navigate("/")}>Home</div>
                     <div className="text">About</div>
                     <div className="text">Privacy Policy</div>
                     <div className="text">Returns</div>
